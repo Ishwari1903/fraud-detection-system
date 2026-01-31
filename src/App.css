@@ -1,0 +1,132 @@
+:root {
+  --primary: #4361ee;
+  --danger: #ef233c;
+  --success: #2ec4b6;
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+}
+
+body {
+  background-color: var(--bg);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 { color: #2b2d42; margin-bottom: 5px; }
+header p { color: #8d99ae; }
+
+/* Input Card */
+.input-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  min-width: 150px;
+}
+
+.btn-check {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Result Box */
+.result-box {
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  animation: slideDown 0.4s ease;
+}
+
+.result-box.fraud { background: #ffe3e3; border-left: 8px solid var(--danger); }
+.result-box.safe { background: #e7fbf8; border-left: 8px solid var(--success); }
+
+/* Table Section */
+.history-section {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-container { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 15px;
+  background: #f1f3f5;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+td { padding: 15px; border-bottom: 1px solid #f1f3f5; }
+
+/* Badges */
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-badge.fraud { background: #ffdada; color: var(--danger); }
+.status-badge.safe { background: #d1f7f1; color: var(--success); }
+
+.row-fraud { background-color: #fffafa; }
+
+.btn-delete {
+  color: var(--danger);
+  background: none;
+  border: 1px solid var(--danger);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete:hover { background: var(--danger); color: white; }
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
